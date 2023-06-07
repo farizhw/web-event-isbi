@@ -1,3 +1,3 @@
 # web-event-isbi
 
-Web ini dibuat bertujuan untuk memenuhi salah satu syarat mengikuti skripsi.
+Web ini dibuat bertujuan untuk memenuhi salah satu syarat mengikuti sidang skripsi.
