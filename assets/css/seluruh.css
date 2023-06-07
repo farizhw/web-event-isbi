@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* NAVBAR */
+.navbar {
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    color: #070b83;
+}
+
+.navbar-brand {
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.nav-link {
+    font-size: 13px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    margin-left: 12px;
+}
+
+.dropdown-toggle {
+    font-size: 13px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    margin-top: 9px;
+    margin-right: 2px;
+}
+
+.dropdown-menu,
+.dropdown-item {
+    font-size: 13px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    color: #070b83;
+}
+
+.dropdown-item:hover {
+    color: #5a5fd8;
+    background-color: transparent;
+}
+
+.nav-link,
+.navbar-brand,
+.dropdown-toggle {
+    color: inherit !important;
+}
+
+.nav-link:hover {
+    color: #5a5fd8 !important;
+}
+
+.nav-link:focus {
+    color: #5a5fd8 !important;
+}
+
+.nav-berubah {
+    background-color: rgba(255, 255, 255) !important;
+    color: #070b83 !important;
+    -webkit-box-shadow: 0px 7px 22px -2px rgba(0, 0, 0, 0.17);
+    -moz-box-shadow: 0px 7px 22px -2px rgba(0, 0, 0, 0.17);
+    box-shadow: 0px 7px 22px -2px rgba(0, 0, 0, 0.17);
+}
+
+a.active {
+    color: #3238e2 !important;
+}
+
+/* AKHIR NAVBAR */
+
+/* CARD */
+.card {
+    border-radius: 10px;
+    margin: 0px auto;
+    width: 262px;
+}
+
+.card>img {
+    width: 260px;
+    height: 170px;
+    object-fit: cover;
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card-body p {
+    font-size: 13px;
+    white-space: pre-line;
+}
+
+.card-title {
+    min-height: 40px;
+}
+
+.card-text {
+    min-height: 100px;
+}
+
+.kategori {
+    color: #adadad;
+}
+
+.card-btn,
+.btnview:hover {
+    background-color: #00034e;
+    color: #e3c529;
+    border-color: transparent;
+}
+
+.card-footer {
+    text-align: center;
+    color: #b5b5b5;
+}
+
+.card-btn,
+.btnview {
+    border-color: #e3c529;
+    background-color: #fff;
+    color: #e3c529;
+    border-radius: 7px;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+/* AKHIR CARD */
+
+section {
+    min-height: 50vw;
+}
+
+hr.bawah {
+    width: 5%;
+    margin-top: 1px;
+    border-top: 5px solid #e3c529;
+    border-radius: 5px;
+}
+
+.event {
+    padding-top: 120px;
+}
+
+.event h2 {
+    color: #070b83;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+/* FOOTER */
+.footer {
+    height: 150px;
+    background-image: url('../image/peta.png');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position-y: center;
+    background-color: rgba(0, 3, 78, 255);
+    box-shadow: 0px 8px 18px 10px rgb(148, 148, 148);
+}
+
+.footer,
+.p {
+    padding-top: 20px;
+    line-height: 1.8;
+}
+
+/* AKHIR FOOTER */
+
+/* BACK TO TOP */
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    background-color: #070b83;
+    border-color: transparent;
+}
+
+.back-to-top:hover {
+    background-color: #4e54ea;
+}
+
+/* AKHIR BACK TO TOP */
+
+/* SERVICES */
+.serviceBox {
+    font-family: 'Poppins', sans-serif;
+    padding: 25px;
+    margin: 5px 0 0 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.serviceBox:hover {
+    background: #FB374D;
+}
+
+.serviceBox .service-icon {
+    color: #FB374D;
+    font-size: 55px;
+    margin: 0 0 20px;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.serviceBox .service-image>a>img {
+    width: 180px;
+    height: auto;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out 0s;
+    text-decoration: none;
+}
+
+.serviceBox .title {
+    color: #444;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 27px;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.serviceBox .description {
+    color: #999;
+    font-size: 14px;
+    line-height: 27px;
+    margin: 0 0 15px;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.serviceBox .read-more {
+    color: #FB374D;
+    font-size: 15px;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.serviceBox .read-more:hover {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.serviceBox.cyan .service-icon,
+.serviceBox.cyan .read-more {
+    color: #36ADB3;
+}
+
+.serviceBox.cyan:hover {
+    background: #36ADB3;
+}
+
+.serviceBox.blue .service-icon,
+.serviceBox.blue .read-more {
+    color: #172E5A;
+}
+
+.serviceBox.blue:hover {
+    background: #172E5A;
+}
+
+.serviceBox.orange .service-icon,
+.serviceBox.orange .read-more {
+    color: #F05D0D;
+}
+
+.serviceBox.orange:hover {
+    background: #F05D0D;
+}
+
+.serviceBox:hover .service-icon,
+.serviceBox:hover .title,
+.serviceBox:hover .read-more {
+    color: #fff;
+}
+
+.serviceBox:hover .description {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media only screen and (max-width: 990px) {
+    .serviceBox {
+        margin: 0 0 30px;
+    }
+}
+
+/* AKHIR SERVICES */
+
+/* DESKTOP */
+@media (min-width: 992px) {
+
+    .navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+        padding: 0;
+    }
+
+    .carousel,
+    .carousel-item {
+        height: 100vh;
+        min-height: 300px;
+        background: no-repeat fixed center fixed;
+        background-size: cover;
+    }
+
+    .carousel-item::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #000;
+        opacity: 0.7;
+    }
+
+    .carousel-caption {
+        margin-bottom: 118px;
+    }
+
+    .carousel-caption .display-4 {
+        line-height: 1.2;
+        font-weight: 230;
+        font-size: 35px;
+        color: #fff;
+        margin: auto;
+        padding-bottom: 145px;
+    }
+
+    .carousel-caption .display-4 span.kategori {
+        font-weight: 200;
+        font-size: 25px;
+    }
+
+    .carousel-caption .display-4 span.instansi {
+        font-weight: 500;
+    }
+
+    .btnevt {
+        background-color: transparent;
+        color: #c3b989;
+        border-color: #c3b989;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 50px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .btnevt:hover {
+        background-color: #00034e;
+        border-color: transparent;
+        color: #e3c529;
+    }
+
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+
+    /* FOOTER */
+    .footer {
+        height: 150px;
+        background-image: url('../image/peta.png');
+        background-blend-mode: multiply;
+        background-size: cover;
+        background-position-y: center;
+        background-color: rgba(0, 3, 78, 255);
+        box-shadow: 0px 8px 18px 10px rgb(148, 148, 148);
+    }
+
+    .footer,
+    .p {
+        padding-top: 20px;
+        line-height: 1.8;
+    }
+
+    /* AKHIR FOOTER */
+
+
+}

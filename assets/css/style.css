@@ -1,0 +1,748 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* SLIDER */
+.carousel-item {
+    background: no-repeat fixed center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    opacity: 0.7;
+}
+
+.carousel-caption {
+    margin-bottom: 200px;
+}
+
+.carousel-caption .display-4 {
+    line-height: 1.1;
+    font-weight: 230;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.carousel-caption .display-4 span.kategori {
+    font-weight: 200;
+    font-size: 30px;
+    margin: -20px 0px -20px 0px;
+}
+
+.carousel-caption .display-4 span.instansi {
+    font-weight: 500;
+}
+
+/* KABAR */
+.profile-card-2 {
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    width: 355px;
+    height: 240px;
+    box-shadow: 4px 4px 8px -1px rgba(0, 0, 0, 0.42);
+    -webkit-box-shadow: 4px 4px 8px -1px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 4px 4px 8px -1px rgba(0, 0, 0, 0.42);
+}
+
+small {
+    color: rgb(155, 155, 155);
+}
+
+.profile-card-2 p {
+    font-size: 13px;
+    white-space: pre-line;
+}
+
+.profile-card-2>img {
+    width: 355px;
+    height: 240px;
+    object-fit: cover;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-btn {
+    text-transform: capitalize;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-btn,
+.btnkabar {
+    border-color: rgb(192, 64, 64);
+    background-color: rgb(192, 64, 64);
+    color: rgb(220, 220, 220);
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: bold;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-btn,
+.btnkabar:hover {
+    border-color: rgb(157, 38, 38);
+    background-color: rgb(157, 38, 38);
+    color: rgb(255, 255, 255);
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-judul {
+    text-transform: capitalize;
+    position: absolute;
+    padding: 0px 30px 10px 30px;
+    bottom: 50px;
+    font-size: 18px;
+    color: #FFF;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-kategori {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: #FFF;
+    font-size: 12px;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-tgl {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    color: #FFF;
+    font-size: 12px;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2:hover>img {
+    filter: grayscale(100%);
+}
+
+.profile-card-2:hover .profile-judul {
+    bottom: 60px;
+}
+
+.content-artikel {
+    border-radius: 20px;
+}
+
+.body-artikel>img {
+    border-radius: 10px;
+}
+
+.btn-artikel {
+    border-color: rgb(192, 64, 64);
+    background-color: rgb(192, 64, 64);
+    color: rgb(220, 220, 220);
+    border-radius: 8px;
+    transition: all linear 0.25s;
+}
+
+.btn-artikel:hover {
+    border-color: rgb(157, 38, 38);
+    background-color: rgb(157, 38, 38);
+    color: rgb(255, 255, 255);
+    transition: all linear 0.25s;
+}
+
+/* .profile-card-2:hover .profile-kategori {
+    bottom: 30px;
+}
+
+.profile-card-2:hover .profile-tgl {
+    bottom: 30px;
+} */
+
+/* KABAR */
+
+/* KEGIATAN */
+.card {
+    border-radius: 10px;
+    margin: 0px auto;
+    width: 262px;
+}
+
+.card>img {
+    width: 260px;
+    height: 170px;
+    object-fit: cover;
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card-title {
+    height: 40px;
+}
+
+.card-text {
+    height: 100px;
+}
+
+.card-body p {
+    font-size: 13px;
+    white-space: pre-line;
+}
+
+.card-btn,
+.btnview:hover {
+    background-color: #00034e;
+    color: #e3c529;
+    border-color: transparent;
+}
+
+.card-footer {
+    text-align: center;
+    color: #b5b5b5;
+}
+
+.card-btn,
+.btnview {
+    border-color: #e3c529;
+    background-color: #fff;
+    color: #e3c529;
+    border-radius: 7px;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+/* KEGIATAN */
+
+/* NAVBAR */
+.navbar {
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    color: #070b83;
+}
+
+.navbar-brand {
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.nav-link {
+    font-size: 13px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    margin-left: 12px;
+}
+
+/* AKHIR NAVBAR */
+
+section {
+    min-height: 50vw;
+}
+
+hr.bawah {
+    width: 5%;
+    margin-top: 1px;
+    border-top: 5px solid #e3c529;
+    border-radius: 5px;
+}
+
+.tentang {
+    padding-top: 60px;
+    text-align: center;
+}
+
+.tentang h2 {
+    color: #070b83;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.tentang p {
+    font-size: 17px;
+}
+
+.event {
+    padding-top: 60px;
+}
+
+.event h2 {
+    color: #070b83;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.artikel {
+    padding-top: 60px;
+}
+
+.artikel h2 {
+    color: #070b83;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.kategori {
+    color: #adadad;
+}
+
+.modal-content>img {
+    /* width: auto;
+    height: 200px;
+    margin: 0px auto; */
+    object-fit: cover;
+    display: block;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.main {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.main p {
+    position: relative;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    color: #777;
+}
+
+.main .gallery {
+    position: relative;
+    height: auto;
+    width: 90%;
+    margin: auto;
+    padding: 45px 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    /*i write auto four time because we want four rows*/
+    grid-gap: 2vh;
+    grid-auto-flow: dense;
+}
+
+.main .gallery .img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9);
+    border-radius: 2px;
+}
+
+.main .gallery .img:first-child {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+
+.main .gallery .img:nth-child(2n+3) {
+    grid-row-start: span 2;
+}
+
+.main .gallery .img:nth-child(4n+5) {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+
+.main .gallery .img:nth-child(6n+7) {
+    grid-row-start: span 1;
+}
+
+.main .gallery .img:nth-child(7n+8) {
+    grid-column-start: span 2;
+}
+
+.main .gallery .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.5) grayscale(100);
+    border-radius: 2px;
+    transition: 0.3s ease-in-out;
+}
+
+.main .gallery .img:hover img {
+    filter: brightness(1) grayscale(0);
+}
+
+/* KALENDAR */
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 190px;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.filter {
+    grid-area: 1 / 2 / 2 / 3;
+    margin: 6em 0 0 1em;
+}
+
+.event_filter_wrapper {
+    margin: .5em 0;
+}
+
+#calendar {
+    margin: 3em 0 0 0;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.festival .fc-time {
+    display: none;
+}
+
+
+.fc-day-grid-event .fc-content {
+    white-space: normal;
+}
+
+a.fc-event-past {
+    background-color: grey !important;
+    border: none;
+}
+
+a.fc-event.hidden {
+    display: none;
+}
+
+/* AKHIR KALENDAR */
+
+/* FOOTER */
+.footer {
+    height: 150px;
+    background-image: url('../image/peta.png');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position-y: center;
+    background-color: rgba(0, 3, 78, 255);
+    box-shadow: 0px 8px 18px 10px rgb(148, 148, 148);
+}
+
+.footer,
+.p {
+    padding-top: 20px;
+    line-height: 1.8;
+}
+
+/* AKHIR FOOTER */
+
+/* BACK TO TOP */
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    background-color: #070b83;
+    border-color: transparent;
+}
+
+.back-to-top:hover {
+    background-color: #4e54ea;
+}
+
+/* AKHIR BACK TO TOP */
+
+/* SERVICES */
+.serviceBox {
+    font-family: 'Poppins', sans-serif;
+    padding: 25px;
+    margin: 5px 0 0 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.serviceBox:hover {
+    background: #FB374D;
+}
+
+.serviceBox .service-icon {
+    color: #FB374D;
+    font-size: 55px;
+    margin: 0 0 20px;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.serviceBox .service-image>a>img {
+    width: 180px;
+    height: auto;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out 0s;
+    text-decoration: none;
+}
+
+.serviceBox .title {
+    color: #444;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 27px;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.serviceBox .description {
+    color: #999;
+    font-size: 14px;
+    line-height: 27px;
+    margin: 0 0 15px;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.serviceBox .read-more {
+    color: #FB374D;
+    font-size: 15px;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.serviceBox .read-more:hover {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.serviceBox.cyan .service-icon,
+.serviceBox.cyan .read-more {
+    color: #36ADB3;
+}
+
+.serviceBox.cyan:hover {
+    background: #36ADB3;
+}
+
+.serviceBox.blue .service-icon,
+.serviceBox.blue .read-more {
+    color: #172E5A;
+}
+
+.serviceBox.blue:hover {
+    background: #172E5A;
+}
+
+.serviceBox.orange .service-icon,
+.serviceBox.orange .read-more {
+    color: #F05D0D;
+}
+
+.serviceBox.orange:hover {
+    background: #F05D0D;
+}
+
+.serviceBox:hover .service-icon,
+.serviceBox:hover .title,
+.serviceBox:hover .read-more {
+    color: #fff;
+}
+
+.serviceBox:hover .description {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media only screen and (max-width: 990px) {
+    .serviceBox {
+        margin: 0 0 30px;
+    }
+}
+
+/* AKHIR SERVICES */
+
+/* DESKTOP */
+@media (min-width: 992px) {
+
+    .navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+        padding: 0;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        color: white;
+    }
+
+    .navbar-brand {
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+
+    .nav-link {
+        font-size: 13px;
+        font-weight: 550;
+        letter-spacing: 1px;
+        margin-left: 12px;
+    }
+
+    .dropdown-toggle {
+        font-size: 13px;
+        font-weight: 550;
+        letter-spacing: 1px;
+        margin-top: 9px;
+        margin-right: 2px;
+    }
+
+    .dropdown-menu,
+    .dropdown-item {
+        font-size: 13px;
+        font-weight: 550;
+        letter-spacing: 1px;
+        color: #070b83;
+    }
+
+    .dropdown-item:hover {
+        color: #5a5fd8;
+        background-color: transparent;
+    }
+
+    .dropdown-toggle:hover {
+        color: #5a5fd8 !important;
+    }
+
+    .nav-link,
+    .navbar-brand,
+    .dropdown-toggle {
+        color: inherit !important;
+    }
+
+    .nav-link:hover {
+        color: #5a5fd8 !important;
+    }
+
+    .nav-link:focus {
+        color: #5a5fd8 !important;
+    }
+
+    .nav-berubah {
+        background-color: rgba(255, 255, 255) !important;
+        color: #070b83 !important;
+        -webkit-box-shadow: 0px 7px 22px -2px rgba(0, 0, 0, 0.17);
+        -moz-box-shadow: 0px 7px 22px -2px rgba(0, 0, 0, 0.17);
+        box-shadow: 0px 7px 22px -2px rgba(0, 0, 0, 0.17);
+    }
+
+    /* AKHIR NAVBAR */
+
+    .carousel,
+    .carousel-item {
+        height: 100vh;
+        min-height: 300px;
+        background: no-repeat fixed center fixed;
+        background-size: cover;
+    }
+
+    .carousel-item::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #000;
+        opacity: 0.7;
+    }
+
+    .carousel-caption {
+        margin-bottom: 118px;
+    }
+
+    .carousel-caption .display-4 {
+        line-height: 1.2;
+        font-weight: 230;
+        font-size: 35px;
+        color: #fff;
+        margin: auto;
+        padding-bottom: 145px;
+    }
+
+    .carousel-caption .display-4 span.kategori {
+        font-weight: 200;
+        font-size: 25px;
+    }
+
+    .carousel-caption .display-4 span.instansi {
+        font-weight: 500;
+    }
+
+    .btnevt {
+        background-color: transparent;
+        color: #c3b989;
+        border-color: #c3b989;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 50px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .btnevt:hover {
+        background-color: #00034e;
+        border-color: transparent;
+        color: #e3c529;
+    }
+
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+
+    /* FOOTER */
+    .footer {
+        height: 150px;
+        background-image: url('../image/peta.png');
+        background-blend-mode: multiply;
+        background-size: cover;
+        background-position-y: center;
+        background-color: rgba(0, 3, 78, 255);
+        box-shadow: 0px 8px 18px 10px rgb(148, 148, 148);
+    }
+
+    .footer,
+    .p {
+        padding-top: 20px;
+        line-height: 1.8;
+    }
+
+    /* AKHIR FOOTER */
+
+
+}
