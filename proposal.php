@@ -1,4 +1,4 @@
-<?php 
+<?php
 date_default_timezone_set('Asia/Jakarta');
 ?>
 <!doctype html>
@@ -29,8 +29,7 @@ date_default_timezone_set('Asia/Jakarta');
             <a class="navbar-brand page-scroll navbar-active" href="./index.php#home">
                 <img src="./assets/image/isbi.png" width="45" class="d-inline-block"> &nbsp;ISBI Bandung
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -40,8 +39,7 @@ date_default_timezone_set('Asia/Jakarta');
                     </li> -->
                     <div class="btn-group mr-auto">
                         <a type="button" class="nav-link page-scroll" href="./index.php#tentang">Tentang</a>
-                        <a type="button" class="dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                        <a type="button" class="dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="sr-only">Toggle Dropdown</span>
                         </a>
                         <div class="dropdown-menu">
@@ -50,8 +48,7 @@ date_default_timezone_set('Asia/Jakarta');
                     </div>
                     <div class="btn-group mr-auto">
                         <a type="button" class="nav-link page-scroll" href="./index.php#event">Kegiatan</a>
-                        <a type="button" class="dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                        <a type="button" class="dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="sr-only">Toggle Dropdown</span>
                         </a>
                         <div class="dropdown-menu">
@@ -86,16 +83,13 @@ date_default_timezone_set('Asia/Jakarta');
             <div class="col-md-10 mx-auto">
                 <div class="contact_field">
                     <p>Silahkan jika ingin membuat kegiatan maka bisa mengajukan proposal melalui form ini!.</p>
-                    <button type="button" class="contact_form_submit" data-toggle="modal"
-                        data-target="#exampleModalCenter">
+                    <button type="button" class="contact_form_submit" data-toggle="modal" data-target="#exampleModalCenter">
                         Ajukan Sekarang
                     </button>
 
                     <!-- Modal -->
-                    <form action="./admineventisbi/superadmin/modul_proposal/proses_simpan.php" method="post"
-                        enctype="multipart/form-data">
-                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <form action="./admineventisbi/superadmin/modul_proposal/proses_simpan.php" method="post" enctype="multipart/form-data">
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content rounded-1">
                                     <div class="modal-header">
@@ -109,21 +103,17 @@ date_default_timezone_set('Asia/Jakarta');
                                         <form>
                                             <div class="form-group ">
                                                 <input type="hidden" name="id_proposal" />
-                                                <input type="hidden" name="tgl_up" value="<?php echo date('Y-m-d h:i:s A')?>" />
-                                                <input type="text" class="form-control form-group" name="judul"
-                                                    placeholder="Judul Kegiatan*" required />
+                                                <input type="hidden" name="tgl_up" value="<?php echo date('Y-m-d h:i:s A') ?>" />
+                                                <input type="text" class="form-control form-group" name="judul" placeholder="Judul Kegiatan*" required />
                                             </div>
                                             <div class="form-group ">
-                                                <input type="text" class="form-control form-group" name="nama"
-                                                    placeholder="Nama Lengkap Pengaju*" required />
+                                                <input type="text" class="form-control form-group" name="nama" placeholder="Nama Lengkap Pengaju*" required />
                                             </div>
                                             <div class="form-group">
-                                                <input type="email" class="form-control form-group" name="email"
-                                                    placeholder="Email*" required />
+                                                <input type="email" class="form-control form-group" name="email" placeholder="Email*" required />
                                             </div>
                                             <div class="form-group">
-                                                <input type="number" class="form-control form-group" name="nowa"
-                                                    placeholder="No WA*" required />
+                                                <input type="number" class="form-control form-group" name="nowa" placeholder="No WA*" required />
                                             </div>
                                             <i style="font-size: 11px;color: red;">*File harus berekstensi PDF*</i>
                                             <div>
@@ -134,8 +124,7 @@ date_default_timezone_set('Asia/Jakarta');
                                         </form>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="submit" name="ajukan"
-                                            class="btn btn-rounded btn-success btn-sm">Ajukan</button>
+                                        <button type="submit" name="ajukan" class="btn btn-rounded btn-success btn-sm">Ajukan</button>
                                     </div>
                                 </div>
                             </div>
@@ -155,16 +144,15 @@ date_default_timezone_set('Asia/Jakarta');
                 <p>ISI Yogyakarta | ISI Surakarta | ISI Denpasar | ISI Padang Panjang | ISBI Tanah Papua | ISBI Aceh
                     <br>
                     <b>ISBI BANDUNG</b> <br>
-                    Jl. Buah Batu No. 212 Bandung | Phone: +62 7314982 | Fax: +62 7303021 | e-Mail: <a
-                        href="https://mail.google.com/">isbi@isbi.ac.id</a><br><br>
-                    Copyright by <b>Event Team 2021 ISBI Bandung.</b></p>
+                    Jl. Buah Batu No. 212 Bandung | Phone: +62 7314982 | Fax: +62 7303021 | e-Mail: <a href="https://mail.google.com/">isbi@isbi.ac.id</a><br><br>
+                    Copyright by <b>Event Team 2021 ISBI Bandung.</b>
+                </p>
             </div>
         </div>
     </footer>
     <!--AKHIR FOOTER-->
 
-    <a id="back-to-top" href="#" class="btn btn-secondary btn-md back-to-top" role="button"><i
-            class="fas fa-chevron-up"></i></a>
+    <a id="back-to-top" href="#" class="btn btn-secondary btn-md back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
@@ -178,7 +166,7 @@ date_default_timezone_set('Asia/Jakarta');
 
         const fileChosen = document.getElementById('file-chosen');
 
-        actualBtn.addEventListener('change', function () {
+        actualBtn.addEventListener('change', function() {
             fileChosen.textContent = this.files[0].name
         })
     </script>

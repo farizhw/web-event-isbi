@@ -1,11 +1,11 @@
-<?php 
-	session_start();
- 
-	// cek apakah yang mengakses halaman ini sudah login
-	if($_SESSION['level']==""){
-		header("location:index.php?pesan=gagal");
-	}
- 
+<?php
+session_start();
+
+// cek apakah yang mengakses halaman ini sudah login
+if ($_SESSION['level'] == "") {
+    header("location:index.php?pesan=gagal");
+}
+
 ?>
 <!doctype html>
 
@@ -58,21 +58,21 @@
                             <span></span>
                         </div>
                     </div>
-                    <?php if ($_SESSION['level']=="SuperAdmin") { ?>
-                    <!-- profile info & task notification -->
-                    <div class="col-md-6 col-sm-4 clearfix">
-                        <ul class="notification-area pull-right">
-                            <li class="dropdown">
-                                <i class="ti-bell dropdown-toggle" data-toggle="dropdown">
-                                    <span id="notif"></span>
-                                </i>
-                                <div id="pesan" class="dropdown-menu bell-notify-box notify-box">
-                                <!-- <span class="notify-title">Melihat Semua Pesan<a href="#" class="float-right">lihat semua</a></span> -->
+                    <?php if ($_SESSION['level'] == "SuperAdmin") { ?>
+                        <!-- profile info & task notification -->
+                        <div class="col-md-6 col-sm-4 clearfix">
+                            <ul class="notification-area pull-right">
+                                <li class="dropdown">
+                                    <i class="ti-bell dropdown-toggle" data-toggle="dropdown">
+                                        <span id="notif"></span>
+                                    </i>
+                                    <div id="pesan" class="dropdown-menu bell-notify-box notify-box">
+                                        <!-- <span class="notify-title">Melihat Semua Pesan<a href="#" class="float-right">lihat semua</a></span> -->
 
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     <?php } ?>
                 </div>
             </div>
@@ -94,11 +94,11 @@
                         <div class="user-profile pull-right btn-sm">
                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown">
                                 <?php echo $_SESSION['username']; ?>
-                                <i class="fa fa-angle-down"></i></h4>
+                                <i class="fa fa-angle-down"></i>
+                            </h4>
                             <div class="dropdown-menu">
                                 <a class="text-muted" href="#"> <b> <?php echo $_SESSION['level']; ?></b></a>
-                                <a class="dropdown-item" href="konfig/proses_logout.php"
-                                    onclick="return confirm('Apakah anda yakin ingin keluar?')">Log Out</a>
+                                <a class="dropdown-item" href="konfig/proses_logout.php" onclick="return confirm('Apakah anda yakin ingin keluar?')">Log Out</a>
                             </div>
                         </div>
                     </div>
@@ -110,188 +110,188 @@
                 <!-- sales report area start -->
                 <div class="sales-report-area mt-5 mb-5">
                     <div class="row ">
-                        <?php if ($_SESSION['level']=="SuperAdmin") { ?>
-                        <div class="col-md-4">
-                            <div class="single-report mb-xs-30">
-                                <div class="s-report-inner pr--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fas fa-folder-open ml-5"></i></div>
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Data Pengguna</h4>
-                                        <a href="./superadmin/pengguna.php"><i class="fas fa-play fa-sm"></i></a>
-                                    </div>
-                                    <div class="d-flex justify-content-between pb-2">
-                                        <?php 
-                                                include 'konfig/koneksi.php';
-                                                $data_pengguna=mysqli_query($conn, "Select * From pengguna");
-                                                $jumlah_pengguna=mysqli_num_rows($data_pengguna);
-                                                ?>
-                                        <h2><?php echo"$jumlah_pengguna"; ?></h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="single-report mb-xs-30">
-                                <div class="s-report-inner pr--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fas fa-folder-open ml-5"></i></div>
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Kegiatan</h4>
-                                        <a href="./superadmin/kegiatan.php"><i class="fas fa-play fa-sm"></i></a>
-                                    </div>
-                                    <div class="d-flex justify-content-between pb-2">
-                                        <?php
-                                                include 'konfig/koneksi.php';
-                                                $data_kegiatan=mysqli_query($conn, "select * from keg");
-
-                                                $jumlah_kegiatan=mysqli_num_rows($data_kegiatan);
+                        <?php if ($_SESSION['level'] == "SuperAdmin") { ?>
+                            <div class="col-md-4">
+                                <div class="single-report mb-xs-30">
+                                    <div class="s-report-inner pr--20 pt--30 mb-3">
+                                        <div class="icon"><i class="fas fa-folder-open ml-5"></i></div>
+                                        <div class="s-report-title d-flex justify-content-between">
+                                            <h4 class="header-title mb-0">Data Pengguna</h4>
+                                            <a href="./superadmin/pengguna.php"><i class="fas fa-play fa-sm"></i></a>
+                                        </div>
+                                        <div class="d-flex justify-content-between pb-2">
+                                            <?php
+                                            include 'konfig/koneksi.php';
+                                            $data_pengguna = mysqli_query($conn, "Select * From pengguna");
+                                            $jumlah_pengguna = mysqli_num_rows($data_pengguna);
                                             ?>
-                                        <h2><?php echo"$jumlah_kegiatan"; ?></h2>
+                                            <h2><?php echo "$jumlah_pengguna"; ?></h2>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="single-report mb-xs-30">
-                                <div class="s-report-inner pr--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fas fa-folder-open ml-5"></i></div>
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Artikel</h4>
-                                        <a href="./superadmin/artikel.php"><i class="fas fa-play fa-sm"></i></a>
-                                    </div>
-                                    <div class="d-flex justify-content-between pb-2">
-                                        <?php
-                                                include 'konfig/koneksi.php';
-                                                $data_kegiatan=mysqli_query($conn, "select * from artikel");
+                            <div class="col-md-4">
+                                <div class="single-report mb-xs-30">
+                                    <div class="s-report-inner pr--20 pt--30 mb-3">
+                                        <div class="icon"><i class="fas fa-folder-open ml-5"></i></div>
+                                        <div class="s-report-title d-flex justify-content-between">
+                                            <h4 class="header-title mb-0">Kegiatan</h4>
+                                            <a href="./superadmin/kegiatan.php"><i class="fas fa-play fa-sm"></i></a>
+                                        </div>
+                                        <div class="d-flex justify-content-between pb-2">
+                                            <?php
+                                            include 'konfig/koneksi.php';
+                                            $data_kegiatan = mysqli_query($conn, "select * from keg");
 
-                                                $jumlah_kegiatan=mysqli_num_rows($data_kegiatan);
+                                            $jumlah_kegiatan = mysqli_num_rows($data_kegiatan);
                                             ?>
-                                        <h2><?php echo"$jumlah_kegiatan"; ?></h2>
+                                            <h2><?php echo "$jumlah_kegiatan"; ?></h2>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4 mt-4">
-                            <div class="single-report mb-xs-30">
-                                <div class="s-report-inner pr--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fas fa-folder-open ml-5"></i></div>
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Data Kontak</h4>
-                                        <a href="./superadmin/kontak.php"><i class="fas fa-play fa-sm"></i></a>
-                                    </div>
-                                    <div class="d-flex justify-content-between pb-2">
-                                        <?php 
-                                                include 'konfig/koneksi.php';
-                                                $data_kontak=mysqli_query($conn, "Select * From kontak");
-                                                $jumlah_kontak=mysqli_num_rows($data_kontak);
-                                                ?>
-                                        <h2><?php echo"$jumlah_kontak"; ?></h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mt-4">
-                            <div class="single-report mb-xs-30">
-                                <div class="s-report-inner pr--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fas fa-folder-open ml-5"></i></div>
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Data Proposal</h4>
-                                        <a href="./superadmin/proposal.php"><i class="fas fa-play fa-sm"></i></a>
-                                    </div>
-                                    <div class="d-flex justify-content-between pb-2">
-                                        <?php 
-                                                include 'konfig/koneksi.php';
-                                                $data_kontak=mysqli_query($conn, "Select * From proposal");
-                                                $jumlah_kontak=mysqli_num_rows($data_kontak);
-                                                ?>
-                                        <h2><?php echo"$jumlah_kontak"; ?></h2>
+                            <div class="col-md-4">
+                                <div class="single-report mb-xs-30">
+                                    <div class="s-report-inner pr--20 pt--30 mb-3">
+                                        <div class="icon"><i class="fas fa-folder-open ml-5"></i></div>
+                                        <div class="s-report-title d-flex justify-content-between">
+                                            <h4 class="header-title mb-0">Artikel</h4>
+                                            <a href="./superadmin/artikel.php"><i class="fas fa-play fa-sm"></i></a>
+                                        </div>
+                                        <div class="d-flex justify-content-between pb-2">
+                                            <?php
+                                            include 'konfig/koneksi.php';
+                                            $data_kegiatan = mysqli_query($conn, "select * from artikel");
+
+                                            $jumlah_kegiatan = mysqli_num_rows($data_kegiatan);
+                                            ?>
+                                            <h2><?php echo "$jumlah_kegiatan"; ?></h2>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="col-md-4 mt-4">
+                                <div class="single-report mb-xs-30">
+                                    <div class="s-report-inner pr--20 pt--30 mb-3">
+                                        <div class="icon"><i class="fas fa-folder-open ml-5"></i></div>
+                                        <div class="s-report-title d-flex justify-content-between">
+                                            <h4 class="header-title mb-0">Data Kontak</h4>
+                                            <a href="./superadmin/kontak.php"><i class="fas fa-play fa-sm"></i></a>
+                                        </div>
+                                        <div class="d-flex justify-content-between pb-2">
+                                            <?php
+                                            include 'konfig/koneksi.php';
+                                            $data_kontak = mysqli_query($conn, "Select * From kontak");
+                                            $jumlah_kontak = mysqli_num_rows($data_kontak);
+                                            ?>
+                                            <h2><?php echo "$jumlah_kontak"; ?></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mt-4">
+                                <div class="single-report mb-xs-30">
+                                    <div class="s-report-inner pr--20 pt--30 mb-3">
+                                        <div class="icon"><i class="fas fa-folder-open ml-5"></i></div>
+                                        <div class="s-report-title d-flex justify-content-between">
+                                            <h4 class="header-title mb-0">Data Proposal</h4>
+                                            <a href="./superadmin/proposal.php"><i class="fas fa-play fa-sm"></i></a>
+                                        </div>
+                                        <div class="d-flex justify-content-between pb-2">
+                                            <?php
+                                            include 'konfig/koneksi.php';
+                                            $data_kontak = mysqli_query($conn, "Select * From proposal");
+                                            $jumlah_kontak = mysqli_num_rows($data_kontak);
+                                            ?>
+                                            <h2><?php echo "$jumlah_kontak"; ?></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         <?php } ?>
 
-                        <?php if ($_SESSION['level']=="Admin") { ?>
-                        <div class="col-md-4">
-                            <div class="single-report mb-xs-30">
-                                <div class="s-report-inner pr--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fas fa-folder-open ml-5"></i></div>
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Kegiatan</h4>
-                                        <a href="./superadmin/kegiatan.php"><i class="fas fa-play fa-sm"></i></a>
-                                    </div>
-                                    <div class="d-flex justify-content-between pb-2">
-                                        <?php
-                                                include 'konfig/koneksi.php';
-                                                $data_kegiatan=mysqli_query($conn, "select * from keg");
+                        <?php if ($_SESSION['level'] == "Admin") { ?>
+                            <div class="col-md-4">
+                                <div class="single-report mb-xs-30">
+                                    <div class="s-report-inner pr--20 pt--30 mb-3">
+                                        <div class="icon"><i class="fas fa-folder-open ml-5"></i></div>
+                                        <div class="s-report-title d-flex justify-content-between">
+                                            <h4 class="header-title mb-0">Kegiatan</h4>
+                                            <a href="./superadmin/kegiatan.php"><i class="fas fa-play fa-sm"></i></a>
+                                        </div>
+                                        <div class="d-flex justify-content-between pb-2">
+                                            <?php
+                                            include 'konfig/koneksi.php';
+                                            $data_kegiatan = mysqli_query($conn, "select * from keg");
 
-                                                $jumlah_kegiatan=mysqli_num_rows($data_kegiatan);
+                                            $jumlah_kegiatan = mysqli_num_rows($data_kegiatan);
                                             ?>
-                                        <h2><?php echo"$jumlah_kegiatan"; ?></h2>
+                                            <h2><?php echo "$jumlah_kegiatan"; ?></h2>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="single-report mb-xs-30">
-                                <div class="s-report-inner pr--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fas fa-folder-open ml-5"></i></div>
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Artikel</h4>
-                                        <a href="./superadmin/artikel.php"><i class="fas fa-play fa-sm"></i></a>
-                                    </div>
-                                    <div class="d-flex justify-content-between pb-2">
-                                        <?php
-                                                include 'konfig/koneksi.php';
-                                                $data_kegiatan=mysqli_query($conn, "select * from artikel");
+                            <div class="col-md-4">
+                                <div class="single-report mb-xs-30">
+                                    <div class="s-report-inner pr--20 pt--30 mb-3">
+                                        <div class="icon"><i class="fas fa-folder-open ml-5"></i></div>
+                                        <div class="s-report-title d-flex justify-content-between">
+                                            <h4 class="header-title mb-0">Artikel</h4>
+                                            <a href="./superadmin/artikel.php"><i class="fas fa-play fa-sm"></i></a>
+                                        </div>
+                                        <div class="d-flex justify-content-between pb-2">
+                                            <?php
+                                            include 'konfig/koneksi.php';
+                                            $data_kegiatan = mysqli_query($conn, "select * from artikel");
 
-                                                $jumlah_kegiatan=mysqli_num_rows($data_kegiatan);
+                                            $jumlah_kegiatan = mysqli_num_rows($data_kegiatan);
                                             ?>
-                                        <h2><?php echo"$jumlah_kegiatan"; ?></h2>
+                                            <h2><?php echo "$jumlah_kegiatan"; ?></h2>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="single-report mb-xs-30">
-                                <div class="s-report-inner pr--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fas fa-folder-open ml-5"></i></div>
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Data Kontak</h4>
-                                        <a href="./superadmin/kontak.php"><i class="fas fa-play fa-sm"></i></a>
-                                    </div>
-                                    <div class="d-flex justify-content-between pb-2">
-                                        <?php 
-                                                include 'konfig/koneksi.php';
-                                                $data_kontak=mysqli_query($conn, "Select * From kontak");
-                                                $jumlah_kontak=mysqli_num_rows($data_kontak);
-                                                ?>
-                                        <h2><?php echo"$jumlah_kontak"; ?></h2>
+                            <div class="col-md-4">
+                                <div class="single-report mb-xs-30">
+                                    <div class="s-report-inner pr--20 pt--30 mb-3">
+                                        <div class="icon"><i class="fas fa-folder-open ml-5"></i></div>
+                                        <div class="s-report-title d-flex justify-content-between">
+                                            <h4 class="header-title mb-0">Data Kontak</h4>
+                                            <a href="./superadmin/kontak.php"><i class="fas fa-play fa-sm"></i></a>
+                                        </div>
+                                        <div class="d-flex justify-content-between pb-2">
+                                            <?php
+                                            include 'konfig/koneksi.php';
+                                            $data_kontak = mysqli_query($conn, "Select * From kontak");
+                                            $jumlah_kontak = mysqli_num_rows($data_kontak);
+                                            ?>
+                                            <h2><?php echo "$jumlah_kontak"; ?></h2>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         <?php } ?>
 
-                        <?php if ($_SESSION['level']=="Pimpinan") { ?>
-                        <div class="col-md-4">
-                            <div class="single-report mb-xs-30">
-                                <div class="s-report-inner pr--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fas fa-folder-open ml-5"></i></div>
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Data Jadwal</h4>
-                                        <a href="./pimpinan/data_jadwal.php"><i class="fas fa-play fa-sm"></i></a>
-                                    </div>
-                                    <div class="d-flex justify-content-between pb-2">
-                                        <?php 
-                                                include 'konfig/koneksi.php';
-                                                $data_kontak=mysqli_query($conn, "Select * From jad");
-                                                $jumlah_kontak=mysqli_num_rows($data_kontak);
-                                                ?>
-                                        <h2><?php echo"$jumlah_kontak"; ?></h2>
+                        <?php if ($_SESSION['level'] == "Pimpinan") { ?>
+                            <div class="col-md-4">
+                                <div class="single-report mb-xs-30">
+                                    <div class="s-report-inner pr--20 pt--30 mb-3">
+                                        <div class="icon"><i class="fas fa-folder-open ml-5"></i></div>
+                                        <div class="s-report-title d-flex justify-content-between">
+                                            <h4 class="header-title mb-0">Data Jadwal</h4>
+                                            <a href="./pimpinan/data_jadwal.php"><i class="fas fa-play fa-sm"></i></a>
+                                        </div>
+                                        <div class="d-flex justify-content-between pb-2">
+                                            <?php
+                                            include 'konfig/koneksi.php';
+                                            $data_kontak = mysqli_query($conn, "Select * From jad");
+                                            $jumlah_kontak = mysqli_num_rows($data_kontak);
+                                            ?>
+                                            <h2><?php echo "$jumlah_kontak"; ?></h2>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         <?php } ?>
                     </div>
                 </div>
@@ -322,13 +322,13 @@
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
     <script>
-         $(document).ready(function () {
+        $(document).ready(function() {
             selesai();
         });
 
 
         function selesai() {
-            setTimeout(function () {
+            setTimeout(function() {
                 jumlah();
                 selesai();
                 pesan();
@@ -337,7 +337,7 @@
 
 
         function jumlah() {
-            $.getJSON("./superadmin/modul_proposal/proses_notif.php", function (datas) {
+            $.getJSON("./superadmin/modul_proposal/proses_notif.php", function(datas) {
                 $("#notif").html(datas.jumlah);
             });
         }
@@ -345,10 +345,10 @@
 
 
         function pesan() {
-            $.getJSON("./superadmin/modul_proposal/proses_notif_pesan.php", function (data) {
+            $.getJSON("./superadmin/modul_proposal/proses_notif_pesan.php", function(data) {
                 $("#pesan").empty();
                 var no = 1;
-                $.each(data.result, function () {
+                $.each(data.result, function() {
                     $("#pesan").append(`
                     <div class="nofity-list">
                         <a id="pesan" class="notify-item" href="./superadmin/proposal.php">
