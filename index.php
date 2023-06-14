@@ -8,7 +8,6 @@ date_default_timezone_set('Asia/Jakarta');
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS -->
@@ -434,6 +433,5 @@ date_default_timezone_set('Asia/Jakarta');
     <script src="assets/js/main.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/top.js"></script>
-
 
 </body>
