@@ -1,0 +1,12 @@
+Hak Akses Admin
+1. SuperAdmin
+username: superadmin
+password: 12345
+
+2. Admin
+username: admin
+password: 12345
+
+3. Pimpinan
+username: pimpinan
+password: 12345
